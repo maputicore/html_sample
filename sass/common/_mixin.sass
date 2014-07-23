@@ -1,0 +1,55 @@
+//  丸をつくる
+@mixin circle($size)
+    width: $size
+    height: $size
+    border-radius: 100%
+
+// リンクカラーを一括設定
+// color
+@mixin linkColor($color)
+    color: $color
+     
+    &:hover, &:active, &:focus
+        color: lighten($color, 20%)
+
+// background-color
+@mixin linkBgColor($color)
+    background-color : $color
+
+    &:hover, &:active, &:focus
+        background-color: lighten($color, 20%)
+
+// border-color
+@mixin linkBorderColor($color)
+    border-color : $color
+
+    &:hover, &:active, &:focus
+        border-color: lighten($color, 20%)
+
+
+// ベンダープリフェックス
+@mixin css3($property, $value...)
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' 
+        #{$prefix}#{$property}: $value
+
+// 透過
+@mixin opacity($opacity)
+    opacity: $opacity
+    $opacityIE: $opacity * 100
+    filter: alpha(opacity=$opacityIE)
+
+
+@mixin posAbsolute ($top: auto, $right: auto, $bottom: auto, $left: auto) 
+    position: absolute
+    top: $top
+    right: $right
+    bottom: $bottom
+    left: $left
+
+//Placeholder's color
+@mixin placeholder-color($color)
+    &:-moz-placeholder 
+        color : $color
+
+    &::-webkit-input-placeholder 
+        color : $color

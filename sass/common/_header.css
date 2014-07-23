@@ -1,0 +1,13 @@
+div#header {
+  background: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  margin-bottom: 5px;
+  padding: 10px 0; }
+  div#header div h1 {
+    float: left;
+    width: 60rem; }
+  div#header div > div {
+    padding-top: 3rem;
+    width: 10rem; }

@@ -1,0 +1,80 @@
+// Z-INDEX 
+//   Header      100
+//   sub-header  50
+//   body        0
+//
+//
+// -- header -- //
+div#header
+    background : black
+    box-shadow: 0 2px 5px rgba($color_blue_light, 0.8)
+    color : white
+    font-size: 24px   
+    margin-bottom : 0
+    padding : 10px 0
+    top : 0
+    width: 100%
+
+    @include zindex($z_header, 0, fixed)
+    
+    div
+        h1
+            background : #333
+            border-radius : 2px
+            border : 1px solid #444
+            float : left
+            font-size : 1.3rem
+            height : 3.4rem
+            margin : 0
+            padding : 1rem
+            width : 60rem
+
+        > div
+            margin-top: 0
+            width : 12rem
+
+            a 
+                text-align: center
+                height : 3.4rem
+                line-height : 2.2rem
+                width : 100%
+
+div#sub-header
+    box-shadow: 0 2px 5px rgba($color_gray_dark, 0.8)
+    padding : 5px 0 3px
+    @include zindex($z_middle-side, - 1, fixed)
+
+    ul
+        width : 100%
+
+
+div#sub-header.step
+    ul
+        width : 50rem
+
+        li
+            font-size : 10px
+            font-weight: bold
+            text-align: center
+            width : 125px
+
+            > span
+                color : #ccc
+                font-size : 8px
+                font-weight: normal
+
+        li.active:before
+            display: block
+            content: "▼"
+            float : left
+            color : black
+            font-size : 15px
+            position: relative
+            top : -16px
+            left : 55px
+
+        li.complete
+            color : #ccc
+            font-style : italic
+    p
+        font-size : 12px
