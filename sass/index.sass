@@ -7,49 +7,13 @@ $path_font : '../fonts'
 @import "common/_colors"
 @import "common/_my"
 @import "common/_mixin"
-@import "common/_zindex"
-@import "common/_button"
-@import "common/_label"
-@import "common/_myicon"
-@import "common/_header"
-@import "animate/_wave_button"
-@import "plugin/_formlist"
-@import "plugin/_swlabel"
-@import "plugin/_choice_box"
 
 // ========== main =========//
 body
     background : white
 
-
-span.glyphicon
-    margin-right : 0.2rem
-
 div#header
-    @include zindex($z_middle-side,0,relative)
 
-div#sub-header
-    background : rgba(white, 0.9)
-    height: 6rem
-    width: 100%
-    @include zindex($z_middle,0,relative)
 
-a[data-role='scrollup']
-    background: black
-    bottom: -0.5rem
-    border-radius: 2px
-    box-shadow: $drop_shadow_low
-    cursor: pointer
-    color: white
-    font-size: 1.2rem
-    padding: 0.8rem 2rem
-    position: fixed
-    right: 5rem
-
-a[data-role='scrollup']:hover
-    text-decoration: none
-
+div#footer
 // ========== partial parts =========//
-@import "partial/_regist_menu"
-@import "partial/_regist_pane"
-@import "partial/_regist_options"
